@@ -536,3 +536,17 @@ h1, h2, h3, h4, h5, h6 {
     animation: rotation 2s infinite linear;
 	margin-right: 3%;
 }
+
+.bgio-client {
+	width: 100%;
+	height: 100%;
+}
+
+#winner {
+	color: #311B46;
+	font-weight: 700;
+	font-size: calc(1vw + 1vh);
+	text-transform: uppercase;
+	text-shadow: 0 1px 1px #4C848C, 0px -1px 1px #B9379B;
+	letter-spacing: 0.1rem;
+}

@@ -1,6 +1,19 @@
 import { Link} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 const invite = () => {
+  let navigate = useNavigate();
+
+  useEffect(() => {
+    document.addEventListener('keydown', detectKeyDown, true)
+  }, [])
+
+  const detectKeyDown = (e) => {
+    if (e.key === 'Enter') {
+      navigate("/lobby-guest"); 
+    }
+  }
   return (
     <>
       <div id="glassbox" className="w-[30%] h-[80%] flex flex-col items-center justify-center">

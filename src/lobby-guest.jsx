@@ -5,6 +5,7 @@ import { Tabs } from "./tabs";
 import { saveTheThibsData } from "./saveTheThibsData";
 import useCopyToClipboard from "./clipboard";
 import { ticTacToeData } from "./tic-tac-toe-data";
+import App from "./ttt/App";
 
 const lobbyGuest = () => {
 
@@ -134,7 +135,9 @@ const lobbyGuest = () => {
                     </div>
 
                     <div className={!isClickedGame2 ? "collapse w-[0%] h-[0%]": "w-full h-full"}>
-                        <Tabs data={ticTacToeData} />
+                      <div className="w-full h-full flex items-center justify-center">
+                        <App />
+                      </div>
                     </div>
                 </div>
             </div>

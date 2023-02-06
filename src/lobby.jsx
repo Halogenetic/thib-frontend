@@ -5,6 +5,7 @@ import { Tabs } from "./tabs";
 import { saveTheThibsData } from "./saveTheThibsData";
 import useCopyToClipboard from "./clipboard";
 import { ticTacToeData } from "./tic-tac-toe-data";
+import App from "./ttt/App";
 
 const lobby = () => {
 
@@ -97,7 +98,7 @@ const lobby = () => {
 
                 <div id="container" className="w-1/3 h-full flex items-center justify-center">
                     <div id="btn" className="w-[75%] h-[60%]">
-                        <Link className="w-full h-full btninv" to="#" onClick={() => copy("http://localhost:1234/invite")}>
+                        <Link className="w-full h-full btninv" to="#" onClick={() => copy("https://thib-games.netlify.app/invite")}>
                             INVITE
                         </Link>
                     </div>
@@ -143,7 +144,9 @@ const lobby = () => {
                     </div>
 
                     <div className={!isClickedGame2 ? "collapse w-[0%] h-[0%]": "w-full h-full"}>
-                        <Tabs data={ticTacToeData} />
+                      <div className="w-full h-full flex items-center justify-center">
+                        <App />
+                      </div>
                     </div>
                 </div>
             </div>
